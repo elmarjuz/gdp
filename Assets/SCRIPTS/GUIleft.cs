@@ -1,73 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GUIleft : MonoBehaviour {
-	public GameObject target;
-	public GameObject laser;
-	GameObject lilShip;
-	GameObject currTarget;
-	PublicData data;
-	GameObject shotLaser;
+public class GUIleft : MonoBehaviour
+{
+    public GameObject target;
+    public GameObject laser;
+    GameObject lilShip;
+    GameObject currTarget;
+    PublicData data;
+    GameObject shotLaser;
 
-	Vector3 targetPosition;
+    Vector3 targetPosition;
 
-	bool isTargeting;
-	bool isCharged;
+    bool isTargeting;
+    bool isCharged;
 
-	float damage;
-	float delay;
-	float mouseAngle;
-	float shipAngle;
-	float finalAngle;
+    float damage;
+    float delay;
+    float mouseAngle;
+    float shipAngle;
+    float finalAngle;
 
-	public float charge;
-	public float maxCharge;
-	float recharge;
-	public float degreeLimit = 130;
+    public float charge;
+    public float maxCharge;
+    float recharge;
+    public float degreeLimit = 130;
 
-	bool ranOut;
+    bool ranOut;
 
-	Transform locationBase;
-	float scaleMod;
-	Vector3 localPos;
-
-
-	Transform parent;
-
-	// Use this for initialization
-	void Start () {
-		locationBase = transform.parent.parent.Find("leftarm");
-		scaleMod = transform.parent.localScale.x;
-		localPos = new Vector3(0,0,-2);
-
-		GetComponent<SpriteRenderer>().enabled = false;
-		lilShip = GameObject.Find ("LILSHIP");
-		data = GameObject.Find("DataHolder").GetComponent<PublicData>();
-		damage = data.motherShipDamage;
-		delay = data.motherShipLaserDelay;
-		isCharged = true;
-
-		maxCharge = data.shipBurstMaxCharge;
-		charge=maxCharge;
-		recharge = data.shipBurstRecharge;
-		data.shipBurstChargePercent = charge/maxCharge;
-
-		
-	}
-
-	void OnMouseOver(){
-		GetComponent<SpriteRenderer>().enabled = true;
-	}
-	void OnMouseExit(){
-		GetComponent<SpriteRenderer>().enabled = false;
-
-	}
+    Transform locationBase;
+    float scaleMod;
+    Vector3 localPos;
 
 
-	void OnMouseDown() {
-		if(isCharged){
-			isTargeting = true;
-			/*Plane playerPlane = new Plane (Vector3.forward, transform.position);
+    Transform parent;
+
+    // Use this for initialization
+    void Start()
+    {
+        locationBase = transform.parent.parent.Find("leftarm");
+        scaleMod = transform.parent.localScale.x;
+        localPos = new Vector3(0, 0, -2);
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        lilShip = GameObject.Find("LILSHIP");
+        data = GameObject.Find("DataHolder").GetComponent<PublicData>();
+        damage = data.motherShipDamage;
+        delay = data.motherShipLaserDelay;
+        isCharged = true;
+
+        maxCharge = data.shipBurstMaxCharge;
+        charge = maxCharge;
+        recharge = data.shipBurstRecharge;
+        data.shipBurstChargePercent = charge / maxCharge;
+
+
+    }
+
+    void OnMouseOver()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+    }
+    void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+
+    }
+
+
+    void OnMouseDown()
+    {
+        if (isCharged)
+        {
+            isTargeting = true;
+            /*Plane playerPlane = new Plane (Vector3.forward, transform.position);
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			float hitdist = 0;
 			if (Input.GetKey (KeyCode.Mouse0)) {
@@ -77,18 +83,19 @@ public class GUIleft : MonoBehaviour {
 				}
 			}
 			currTarget = Instantiate(target, targetPosition, transform.rotation) as GameObject;*/
-			FireLaser();
-		}
-		lilShip.GetComponent<LilShipControls>().enabled = false;
-		
-	}
-	
-	void OnMouseUp(){
-		StartCoroutine(WaitAndKill());
-		isTargeting=false;
-		lilShip.GetComponent<LilShipControls>().enabled = true;
+            FireLaser();
+        }
+        lilShip.GetComponent<LilShipControls>().enabled = false;
 
-		/*if(isCharged && shotLaser==null){
+    }
+
+    void OnMouseUp()
+    {
+        StartCoroutine(WaitAndKill());
+        isTargeting = false;
+        lilShip.GetComponent<LilShipControls>().enabled = true;
+
+        /*if(isCharged && shotLaser==null){
 			GetComponent<SpriteRenderer>().enabled = false;
 			isTargeting = false;
 			Destroy(currTarget);
@@ -105,73 +112,85 @@ public class GUIleft : MonoBehaviour {
 			shotLaser.transform.eulerAngles = new Vector3 (0, 0, finalAngle);
 
 		}*/
-	}
+    }
 
-	void FireLaser()
-	{
-		NewAngles();
+    void FireLaser()
+    {
+        NewAngles();
 
-		shotLaser = Instantiate (laser, transform.position, transform.rotation) as GameObject;
-		shotLaser.name = "theMotherShot";
-		shotLaser.transform.parent = transform.parent.parent;
-		shotLaser.GetComponent<CommonBulletStuff> ().setDamage (damage);
+        shotLaser = Instantiate(laser, transform.position, transform.rotation) as GameObject;
+        shotLaser.name = "theMotherShot";
+        shotLaser.transform.parent = transform.parent.parent;
+        shotLaser.GetComponent<CommonBulletStuff>().setDamage(damage);
 
-		shotLaser.transform.eulerAngles = new Vector3 (0, 0, finalAngle);
+        shotLaser.transform.eulerAngles = new Vector3(0, 0, finalAngle);
 
-	}
+    }
 
-	void NewAngles(){
-		Plane playerPlane = new Plane (Vector3.forward, transform.position);
-		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		float hitdist = 0;
-		if (Input.GetKey (KeyCode.Mouse0)) {
-			//moved this check under keydown to avoid the constant turning after the mouse.
-			if (playerPlane.Raycast (ray, out hitdist)) {
-				targetPosition = ray.GetPoint (hitdist);	
-			}
-			
-		}
-		Vector3 relative = transform.InverseTransformPoint (targetPosition);
-		mouseAngle = Mathf.Atan2 (relative.x, relative.y) * 180 / Mathf.PI;
-		shipAngle = data.motherShipAngle;
-		if(mouseAngle<0 && mouseAngle>-degreeLimit)mouseAngle=-degreeLimit;
-		if(mouseAngle>0 && mouseAngle<degreeLimit)mouseAngle=degreeLimit;
+    void NewAngles()
+    {
+        Plane playerPlane = new Plane(Vector3.forward, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float hitdist = 0;
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            //moved this check under keydown to avoid the constant turning after the mouse.
+            if (playerPlane.Raycast(ray, out hitdist))
+            {
+                targetPosition = ray.GetPoint(hitdist);
+            }
 
-		finalAngle = -mouseAngle+shipAngle-90;
-	}
+        }
+        Vector3 relative = transform.InverseTransformPoint(targetPosition);
+        mouseAngle = Mathf.Atan2(relative.x, relative.y) * 180 / Mathf.PI;
+        shipAngle = data.motherShipAngle;
+        if (mouseAngle < 0 && mouseAngle > -degreeLimit) mouseAngle = -degreeLimit;
+        if (mouseAngle > 0 && mouseAngle < degreeLimit) mouseAngle = degreeLimit;
 
-	IEnumerator WaitAndKill(){
-		if(shotLaser != null){
-			shotLaser.GetComponent<PolygonCollider2D>().enabled = false;
-			shotLaser.transform.Find("burstBody").GetComponent<ParticleSystem>().enableEmission = false;
-		}
-		yield return new WaitForSeconds(1);
-		Destroy(shotLaser);
-	}
-	// Update is called once per frame
-	void Update () {
+        finalAngle = -mouseAngle + shipAngle - 90;
+    }
 
-		transform.position=locationBase.position+localPos;
-		transform.rotation=locationBase.rotation;
+    IEnumerator WaitAndKill()
+    {
+        if (shotLaser != null)
+        {
+            shotLaser.GetComponent<PolygonCollider2D>().enabled = false;
+            shotLaser.transform.Find("burstBody").GetComponent<ParticleSystem>().enableEmission = false;
+        }
+        yield return new WaitForSeconds(1);
+        Destroy(shotLaser);
+    }
+    // Update is called once per frame
+    void Update()
+    {
 
-		if(charge!=maxCharge && charge!=0){
-			data.shipBurstChargePercent = charge/maxCharge;
-		}
-		if(shotLaser == null) {
-			if(charge < maxCharge) {
-				charge += recharge*Time.deltaTime;
-				if(charge >= maxCharge) {
-					charge = maxCharge;
-					ranOut = false;
-				}
-			}
-		}
-		if(isTargeting){
-			if(charge > 0) {
-				charge -= 0.3f * Time.deltaTime;
-				NewAngles();
-				if(shotLaser!= null) shotLaser.transform.eulerAngles = new Vector3 (0, 0, finalAngle);
-				/*
+        transform.position = locationBase.position + localPos;
+        transform.rotation = locationBase.rotation;
+
+        if (charge != maxCharge && charge != 0)
+        {
+            data.shipBurstChargePercent = charge / maxCharge;
+        }
+        if (shotLaser == null)
+        {
+            if (charge < maxCharge)
+            {
+                charge += recharge * Time.deltaTime;
+                if (charge >= maxCharge)
+                {
+                    charge = maxCharge;
+                    ranOut = false;
+                }
+            }
+        }
+        if (isTargeting)
+        {
+            if (charge > 0)
+            {
+                charge -= 0.3f * Time.deltaTime;
+                NewAngles();
+                if (shotLaser != null) shotLaser.transform.eulerAngles = new Vector3(0, 0, finalAngle);
+                /*
 				Plane playerPlane = new Plane (Vector3.forward, transform.position);
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				float hitdist = 0;
@@ -182,15 +201,17 @@ public class GUIleft : MonoBehaviour {
 					}
 
 				}*/
-			} else {
-				isTargeting = false;
-				ranOut = true;
-				StartCoroutine(WaitAndKill());
-			}
-//			currTarget.transform.position = targetPosition;
-		}
-	}
-	/*
+            }
+            else
+            {
+                isTargeting = false;
+                ranOut = true;
+                StartCoroutine(WaitAndKill());
+            }
+            //			currTarget.transform.position = targetPosition;
+        }
+    }
+    /*
 
 
 	// Use this for initialization

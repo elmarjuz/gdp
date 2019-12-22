@@ -1,38 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickUpHealth : MonoBehaviour {
-	PublicData data;
-	GameObject mothership;
-	GameObject core;
-	float modifier;
-	float top;
-	float bot;
-	
-	// Use this for initialization
-	void Start () {
-		data = GameObject.Find("DataHolder").GetComponent<PublicData>();
-		mothership = GameObject.Find("MOTHERSHIP");
+public class PickUpHealth : MonoBehaviour
+{
+    PublicData data;
+    GameObject mothership;
+    GameObject core;
+    float modifier;
+    float top;
+    float bot;
 
-		core = mothership.transform.Find("core").gameObject;
+    // Use this for initialization
+    void Start()
+    {
+        data = GameObject.Find("DataHolder").GetComponent<PublicData>();
+        mothership = GameObject.Find("MOTHERSHIP");
 
-		top = data.topHealth;
-		bot = data.botHealth;
-	}
+        core = mothership.transform.Find("core").gameObject;
 
-	void OnCollisionEnter2D(){
-		float adder = Random.Range(bot, top);
+        top = data.topHealth;
+        bot = data.botHealth;
+    }
 
-		core.gameObject.GetComponent<TakeDamageAndGetDestroyed>().addHealth(adder);
+    void OnCollisionEnter2D()
+    {
+        float adder = Random.Range(bot, top);
 
-		mothership.SendMessage ("DisplayOverlay", "+ " + System.Math.Round(adder,2) + " HP!");
-		PlayerPrefs.SetFloat("shipHealth", PlayerPrefs.GetFloat("shipHealth") + adder);
-		Destroy(gameObject);
+        core.gameObject.GetComponent<TakeDamageAndGetDestroyed>().addHealth(adder);
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+        mothership.SendMessage("DisplayOverlay", "+ " + System.Math.Round(adder, 2) + " HP!");
+        PlayerPrefs.SetFloat("shipHealth", PlayerPrefs.GetFloat("shipHealth") + adder);
+        Destroy(gameObject);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

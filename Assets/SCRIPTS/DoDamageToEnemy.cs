@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoDamageToEnemy : MonoBehaviour {
+public class DoDamageToEnemy : MonoBehaviour
+{
 
-	public float damage;
+    public float damage;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start()
+    {
 
-	public void setDamage(float setter){
-		damage = setter;
-	}
+    }
+
+    public void setDamage(float setter)
+    {
+        damage = setter;
+    }
 
 }
