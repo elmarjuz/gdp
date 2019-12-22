@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b4917872df83a304e87447cfef85d54b
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - BGtxt: {fileID: 2800000, guid: 242ff4d6f379654489fa484ba0eeee55, type: 3}
+  - border: {instanceID: 0}
+  - flag: {instanceID: 0}
+  - marker: {instanceID: 0}
+  - boomBoom: {instanceID: 0}
+  - currentExplosion: {instanceID: 0}
+  - planet: {instanceID: 0}
+  - theEvent: {instanceID: 0}
+  executionOrder: -100
+  icon: {instanceID: 0}
+  userData: 

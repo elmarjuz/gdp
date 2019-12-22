@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 95bc9afb2da803a449db7c5c245f9104
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - black: {fileID: 2800000, guid: 242ff4d6f379654489fa484ba0eeee55, type: 3}
+  - BGtxt: {fileID: 2800000, guid: 0de61575c93b14e428492cc30cc44bc7, type: 3}
+  - FGtxt: {fileID: 2800000, guid: 6b8e0b6aabc6f114ca0e5d3fe804b592, type: 3}
+  - resTxt: {fileID: 2800000, guid: 53e8da3d806d91046bcadd013982e194, type: 3}
+  - leftTxt: {fileID: 2800000, guid: d4b2303fd2ab5054da09b1f437d8b4e6, type: 3}
+  - rightTxt: {fileID: 2800000, guid: ae689548d801f514090e2eb6cc0bde1a, type: 3}
+  - coreTxt: {fileID: 2800000, guid: ba73c0f7f1e458d48ab4d8e651dc6394, type: 3}
+  - defenseTxt: {fileID: 2800000, guid: 4b5cc0f33ba10174a9718b92e89e4d2d, type: 3}
+  - offenseTxt: {fileID: 2800000, guid: 54384da7e8bc4d94ea8d77cfd8096f15, type: 3}
+  - indicatorRTxt: {fileID: 2800000, guid: 42f19cd2712998347b9a9a279bd2b3d0, type: 3}
+  - indicatorLTxt: {fileID: 2800000, guid: 68210c9c850bb42499b5c1b9f4318f5e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

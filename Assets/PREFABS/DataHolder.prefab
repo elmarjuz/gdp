@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: DataHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4917872df83a304e87447cfef85d54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStarting: 1
+  isEnding: 0
+  GUIOverlay: 1
+  debugOverlay: 0
+  pressed: 0
+  isLost: 0
+  badEnd: {fileID: 2800000, guid: 0d64d2b1c745e9b4ab55005dc1eec163, type: 3}
+  retryBtn: {fileID: 2800000, guid: c0018fd75fb47b845804b6c4f4a25418, type: 3}
+  goodEnd: {fileID: 2800000, guid: 9ef20813028f73447a29aa27478a927b, type: 3}
+  skin: {fileID: 11400000, guid: dc268d468259fa54582765ab6fd6759f, type: 2}
+  BGtxt: {fileID: 2800000, guid: 242ff4d6f379654489fa484ba0eeee55, type: 3}
+  isArena: 0
+  isAddin: 1
+  border: {fileID: 100000, guid: 42a4de4563c800640b162d2e4f03844a, type: 2}
+  flag: {fileID: 100000, guid: 66a358287d618c243b2a5d5e1f549edc, type: 2}
+  marker: {fileID: 100000, guid: c314e449c4f9cd34aa038661d8320c5b, type: 2}
+  boomBoom: {fileID: 100002, guid: b704e3c6c2209754aaf8eedcba55a83b, type: 2}
+  currentExplosion: {fileID: 100000, guid: a5eec40b4d460a3408aa3590af0d4a6c, type: 2}
+  planet: {fileID: 0}
+  theEvent: {fileID: 100002, guid: a9ee5aa16d1ad6a4cb9c59ef17323baa, type: 2}
+  eventDelay: 90
+  laserGuns:
+  - 20
+  - 70
+  - 180
+  - 230
+  shields:
+  - 40
+  - 80
+  - 135
+  - 180
+  - 210
+  - 320
+  plainGuns:
+  - 15
+  - 55
+  - 110
+  - 160
+  - 240
+  - 250
+  - 310
+  moonSpeed: .00499999989
+  moonRadius: 20
+  moonAngle: 180
+  heightMultiplier: 8.60000038
+  isArriving: 1
+  bottomLimit: 12
+  topLimit: 30
+  motherShipRadius: 25
+  motherShipSpeed: 20
+  motherShipPassiveSpeed: 2
+  motherShipAngle: 90
+  motherShipHealth: 700
+  motherShipCoreHealth: 0
+  motherShipLeftHealth: 0
+  motherShipRightHealth: 0
+  motherShipDamage: .5
+  motherShipLaserDelay: 1
+  left: 0
+  core: 1
+  right: 0
+  shipShieldChargePercent: 0
+  shipShieldMaxCharge: 3
+  shipShieldRecharge: .0500000007
+  shipBurstChargePercent: 0
+  shipBurstMaxCharge: 3
+  shipBurstRecharge: .0500000007
+  isDocked: 1
+  wasTeleported: 0
+  lilShipHealth: 100
+  lilShipSpeed: 15
+  lilShipDamage: 10
+  lilShipAngle: 0
+  lilShipShootDelay: .300000012
+  lilShipBulletSpeed: 20
+  ongoingInvasion: 0
+  invasionResource: 1
+  currentInvasionResource: 0
+  pickUpDelay: 30
+  topHealth: 100
+  botHealth: 30
+  topResource: 50
+  botResource: -10
+  topInvasion: 1.5
+  botInvasion: .699999988
+  snowmanSpeed: 20
+  invasionLimit: 0
+  invasionRadTilt: 0
+  invasionAngTilt: 8
+  invasionPercent: 0
+  invasionRow: 7
+  invasionColumn: 3
+  invasionDoingGuys: 0
+  invasionTroopPrc: 0
+  invasionResourceMultiplier: 1
+  invaded: 
+  invasionMultiplier: 3
+  isBoomin: 0
+  uninvadeDelay: 5
+  wasInvaded: 0
+  enemyShipAngle: 0
+  enemyShipSpeed: 7
+  enemyShipHealth: 30
+  enemyShipDamage: 10
+  enemyShipShootDelay: .699999988
+  enemyRespawnDelay: 20
+  enemySpawnDelay: 30
+  enemyHealDelay: 5
+  enemyBulletSpeed: 20
+  enemyShipShootDistance: 6
+  enemyShipCount: 2
+  plainGunHealth: 40
+  plainGunRadius: 15
+  plainGunDamage: 10
+  plainGunBulletSpeed: 10
+  plainGunShootDelay: .899999976
+  plainGunPause: 3
+  plainGunDuration: 2
+  laserGunHealth: 70
+  laserGunRadius: 9
+  laserGunDamage: 1
+  laserGunShootDelay: 5
+  enemyShieldHealth: 60
+  enemySpawnerHealth: 200
+  missileDelay: 5
+  missileSpeed: 20
+  missileDamage: 50
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95bc9afb2da803a449db7c5c245f9104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  black: {fileID: 2800000, guid: 242ff4d6f379654489fa484ba0eeee55, type: 3}
+  gui: {fileID: 100022, guid: 01e3830eeea8e1f478b841ad31b5878c, type: 2}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ab10f4a27362746ba1ac97f18fc55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawned: 0
+  lilShipDeaths: 0
+  shipHealth: 0
+  pickUpsMissed: 0
+  invasionAvgPrc: 0
+  defencesLeft: 0
+  dmgDone: 0
+  isEnd: 0
+  isWon: 0
+  skin: {fileID: 11400000, guid: aa0a2c775a1d538408ce7f1aa0540c7e, type: 2}
+  goodEnd: {fileID: 2800000, guid: fe6f54b91a8064a41806c30360c8d600, type: 3}
+  badEnd: {fileID: 2800000, guid: cf7cc7932da76c04f8c6f0810f2a8204, type: 3}
+  message1: {fileID: 2800000, guid: 81d3d8511172f254ea0e36a82d90ba85, type: 3}
+  message2: {fileID: 2800000, guid: 1118d833afacf6142adecc084169e35a, type: 3}
+  message3: {fileID: 2800000, guid: 62b08fc56a8b22c42a7b00f96555ba1a, type: 3}
+  message4: {fileID: 2800000, guid: bc6ff6331626d0a45badea50a480264c, type: 3}
+  message5: {fileID: 2800000, guid: d077f2e14ef541e4bab5ec32a4ae7c33, type: 3}
+  nextLevel: 
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

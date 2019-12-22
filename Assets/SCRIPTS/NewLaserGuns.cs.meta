@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 8e1f0bc81333c2a43939f878fd8001d7
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - laserGun: {fileID: 100000, guid: 3f8ba89e812e04740b885ec50faba9e8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

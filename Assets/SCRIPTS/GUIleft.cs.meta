@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 41d082ed41eb51048b12c0f926da70cb
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - target: {fileID: 100002, guid: 2b1778235951fb941817e2db5b33c491, type: 2}
+  - laser: {fileID: 100004, guid: 21f7a517cd32b8c478bab74bcc105a49, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

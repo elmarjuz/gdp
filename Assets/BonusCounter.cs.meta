@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a4ab10f4a27362746ba1ac97f18fc55e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - skin: {fileID: 11400000, guid: aa0a2c775a1d538408ce7f1aa0540c7e, type: 2}
+  - goodEnd: {fileID: 2800000, guid: fe6f54b91a8064a41806c30360c8d600, type: 3}
+  - badEnd: {fileID: 2800000, guid: cf7cc7932da76c04f8c6f0810f2a8204, type: 3}
+  - message1: {fileID: 2800000, guid: 81d3d8511172f254ea0e36a82d90ba85, type: 3}
+  - message2: {fileID: 2800000, guid: 1118d833afacf6142adecc084169e35a, type: 3}
+  - message3: {fileID: 2800000, guid: 62b08fc56a8b22c42a7b00f96555ba1a, type: 3}
+  - message4: {fileID: 2800000, guid: bc6ff6331626d0a45badea50a480264c, type: 3}
+  - message5: {fileID: 2800000, guid: d077f2e14ef541e4bab5ec32a4ae7c33, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

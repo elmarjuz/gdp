@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 4d2d5425de1aa974e8cf4bed0d68e49c
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - xplosion: {instanceID: 0}
+  - xplosionSound: {fileID: 100000, guid: f32d0e7573cb7f44985182b2a7d3c3e5, type: 2}
+  - theBar: {instanceID: 0}
+  - littleThing: {fileID: 100000, guid: 938f20a693534eb4fbb6ec812003ac38, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

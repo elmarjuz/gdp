@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 4cf09b53aba9ade4ba29589bd02b4d78
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - rightOUI: {fileID: 100000, guid: d64212ec8bd012347b3325e9fe01e743, type: 2}
+  - leftOUI: {fileID: 100000, guid: c678400a6753d6144bd88a7d35871e6a, type: 2}
+  - coreOUI: {fileID: 100000, guid: 34f6ae3079375574d8706b5fff13b328, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

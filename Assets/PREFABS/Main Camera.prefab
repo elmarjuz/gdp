@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 20: {fileID: 2000000}
+  - 92: {fileID: 9200000}
+  - 124: {fileID: 12400000}
+  - 81: {fileID: 8100000}
+  - 82: {fileID: 8200000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .0414148867, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!20 &2000000
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0, g: .0962475091, b: .191176474, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 2000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 12
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 0
+  m_OcclusionCulling: 1
+--- !u!81 &8100000
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 848cd8e7c73ce4e4482b971a3cc39179, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .114
+  m_Pitch: 1
+  Loop: 1
+  Mute: 1
+  Priority: 255
+  DopplerLevel: 0
+  MinDistance: 0
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!92 &9200000
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650bf49e88d4d8142ad48d8505664d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: {fileID: 11400000, guid: dc268d468259fa54582765ab6fd6759f, type: 2}
+  cameraRotation: 1
+  muteMusic: 0
+  music:
+  - {fileID: 8300000, guid: dafae1d05b6bb9441857b064cd16c03e, type: 3}
+  - {fileID: 8300000, guid: 848cd8e7c73ce4e4482b971a3cc39179, type: 3}
+  continueTexture: {fileID: 2800000, guid: 8605dcad8a8f751459287c97d217be78, type: 3}
+  tutorialTexture: {fileID: 2800000, guid: 57a2d7002413e5c449f2e19c52eeb60e, type: 3}
+  creditsTexture: {fileID: 2800000, guid: 2ecff51095a656b43a464dc39b188c81, type: 3}
+  exitTexture: {fileID: 2800000, guid: 0ea8c8bf2dbe09540a0df6f8fb60bdc2, type: 3}
+  settingsTexture: {fileID: 2800000, guid: 88e8b8cd51fba0d41b4348af6dddd0f6, type: 3}
+  titleTexture: {fileID: 2800000, guid: 7c389631cf3e7424fb63a53bcb397e07, type: 3}
+  muteTexture: {fileID: 2800000, guid: 6b33da210104c744bb82a232ce40c582, type: 3}
+  volumeTexture: {fileID: 2800000, guid: c3cbc87c97a8a304f972a592465c10d4, type: 3}
+  backTexture: {fileID: 2800000, guid: 47834ff0e65fe144998ff5f906880a7f, type: 3}
+  daytonaTexture: {fileID: 2800000, guid: 8c23b42e8391a1046b33570f224da067, type: 3}
+  indieTexture: {fileID: 2800000, guid: 23e01aca2e3fa104a87101abb1fe6bf3, type: 3}
+  fbTexture: {fileID: 2800000, guid: 019c703396ac3354da0007c9e9e4da54, type: 3}
+  retryTexture: {fileID: 2800000, guid: c0018fd75fb47b845804b6c4f4a25418, type: 3}
+  pretty: {fileID: 11400000, guid: eb3b4b1b127424b4c85564078efdee5e, type: 2}
+  creditSheet: {fileID: 2800000, guid: 5f1a6afda608c6e4c84eff8459b82704, type: 3}
+  tutorialSheet: {fileID: 2800000, guid: 704ab2a50dfd18c43bc96c16760875ea, type: 3}
+  backSheet: {fileID: 2800000, guid: 9c2f4529c075f10418f029fd1fad61ec, type: 3}
+  storyBack: {fileID: 0}
+  crediticons: []
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7495a140624683f429a2ba1f61859fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camRadius: 0
+  advancedZoom: 0
+  cameraRotation: 0
+--- !u!124 &12400000
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
