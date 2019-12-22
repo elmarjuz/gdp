@@ -277,11 +277,11 @@ public class PublicData : MonoBehaviour
         }
         else if (Input.GetKeyDown("p"))
         {
-            //debugOverlay=!debugOverlay;
+            debugOverlay=!debugOverlay;
         }
         else if (Input.GetKeyDown("i"))
         {
-            //GUIOverlay=!GUIOverlay;
+            GUIOverlay=!GUIOverlay;
         }
     }
 
