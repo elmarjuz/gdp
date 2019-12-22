@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class CameraControls : MonoBehaviour {
@@ -25,7 +26,7 @@ public class CameraControls : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(Application.loadedLevelName!="Intro"){
+		if(SceneManager.GetActiveScene().name!="Intro"){
 			data = GameObject.Find("DataHolder").GetComponent<PublicData>();
 			heightMod= data.topLimit/12;
 			topCamLimit = data.topLimit+data.topLimit/12+heightMod*2 + 5;
@@ -47,7 +48,7 @@ public class CameraControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Time.timeScale!=0 && !data.isArriving && Application.loadedLevelName!="Intro"){
+		if(Time.timeScale!=0 && !data.isArriving && SceneManager.GetActiveScene().name!="Intro"){
 
 			angle = data.motherShipAngle;
 			radius = data.motherShipRadius;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MotherShipRotation : MonoBehaviour
@@ -106,7 +107,7 @@ public class MotherShipRotation : MonoBehaviour
 				GUI.skin = skin;
 			}
 
-			switch(Application.loadedLevelName){
+			switch(SceneManager.GetActiveScene().name){
 				case "TechnoLevel":
 					text = "left";
 					break;
@@ -142,7 +143,7 @@ public class MotherShipRotation : MonoBehaviour
 				isArriving = false;
 				GetComponent<Invasion> ().enabled = true;
 				data.isArriving = false;
-				if(Application.loadedLevelName == "TechnoLevel" || Application.loadedLevelName == "NatureLevel"){
+				if(SceneManager.GetActiveScene().name == "TechnoLevel" || SceneManager.GetActiveScene().name == "NatureLevel"){
 					isShowin = true;
 					Time.timeScale = 0;
 				}
@@ -209,7 +210,7 @@ public class MotherShipRotation : MonoBehaviour
 
 				transform.eulerAngles = new Vector3 (0, 0, angle - 90);
 
-				/*if(Application.loadedLevelName=="ChristmasArena"){
+				/*if(SceneManager.GetActiveScene().name=="ChristmasArena"){
 					Vector3 turnAround;
 					if(Input.GetAxis("Horizontal")>0){
 						rotDir=-1;

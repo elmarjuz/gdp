@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PublicData : MonoBehaviour
@@ -187,24 +188,24 @@ public class PublicData : MonoBehaviour
 			{50, 100, 250, 0, 0, 0, 0, 0, 0}
 		};
 
-		if(Application.loadedLevelName == "Tutorial")
+		if(SceneManager.GetActiveScene().name == "Tutorial")
 			spawnAngles = new float[,]{
 				{195, 75}, 
 				{326, 0}
 			};
-		else if (Application.loadedLevelName == "TechnoLevel") 
+		else if (SceneManager.GetActiveScene().name == "TechnoLevel") 
 			spawnAngles = new float[,]{
 				{15, 55, 110, 160, 240, 250, 310}, 
 				{1, 90, 180, 270, 0, 0, 0},
 				{40, 80, 135, 180, 210, 320, 0}
 			};
-		else if (Application.loadedLevelName == "FireLevel") 
+		else if (SceneManager.GetActiveScene().name == "FireLevel") 
 			spawnAngles = new float[,]{
 				{20, 70, 180, 230, 0, 0}, 
 				{75, 220, 310, 0, 0, 0},
 				{45, 85, 120, 205, 250, 340}
 			};
-		else if (Application.loadedLevelName == "NatureLevel") 
+		else if (SceneManager.GetActiveScene().name == "NatureLevel") 
 			spawnAngles = new float[,]{
 				{30, 115, 145, 175, 205, 310, 0, 0, 0}, 
 				{20, 60, 110, 140, 170, 210, 260, 320, 0},
@@ -212,7 +213,7 @@ public class PublicData : MonoBehaviour
 				{50, 100, 250, 0, 0, 0, 0, 0, 0}
 			};
 
-		if (Application.loadedLevelName != "Tutorial") {
+		if (SceneManager.GetActiveScene().name != "Tutorial") {
 			cover = planet.transform.Find ("COVER").gameObject;
 			//InvokeRepeating ("ExplodeStuff", 2, 2);
 		}
@@ -298,14 +299,14 @@ public class PublicData : MonoBehaviour
 
 			if(isLost){
 				/*if (GUI.Button (new Rect ((Screen.width - 400) / 2 + 75, (Screen.height - 300)/2 + 180, 120, 60), "Retry")) {
-					Application.LoadLevel (nextLevel);
+					SceneManager.LoadScene(nextLevel);
 				}
 				if (GUI.Button (new Rect ((Screen.width - 400) / 2 + 205, (Screen.height - 300)/2 + 180, 120, 60), "Exit")) {
-					Application.LoadLevel ("Intro");
+					SceneManager.LoadScene("Intro");
 				}*/
 			} else {
 				/*if (GUI.Button (new Rect ((Screen.width - 400) / 2 + 133, (Screen.height - 300)/2 + 170, 140, 60), "Continue")) {
-					Application.LoadLevel (nextLevel);
+					SceneManager.LoadScene(nextLevel);
 				}*/
 			}
 
@@ -333,7 +334,7 @@ public class PublicData : MonoBehaviour
 			GUI.Label (new Rect (10, 10, endW / 2, endH / 2), endMessage); 
 			
 			if (GUI.Button (new Rect (10, endH / 2 + 10, endW- 20, endH/2- 20), buttonMessage)) {
-				Application.LoadLevel (nextLevel);
+				SceneManager.LoadScene(nextLevel);
 			}
 			GUI.EndGroup ();*/
 		} else if(isEnding && isArena && isLost){
@@ -359,7 +360,7 @@ public class PublicData : MonoBehaviour
 			GUI.Box (new Rect (0, 0, endW, endH), badEnd);
 
 			if (GUI.Button (new Rect (15, endH / 2 + 70, endW- 20, endH/2), retryBtn)) {
-				Application.LoadLevel (nextLevel);
+				SceneManager.LoadScene(nextLevel);
 			}
 			GUI.EndGroup ();
 
@@ -439,7 +440,7 @@ public class PublicData : MonoBehaviour
 
 		pressed = true;
 		yield return new WaitForSeconds(3f);
-		Application.LoadLevel (nextLevel);
+		SceneManager.LoadScene(nextLevel);
 	}
 
 	void Update(){
@@ -479,7 +480,7 @@ public class PublicData : MonoBehaviour
 			if(!isArena){
 				isLost = false;
 				isEnding = true;
-				string currentName = Application.loadedLevelName;
+				string currentName = SceneManager.GetActiveScene().name;
 				endMessage = "CONGRATULATIONS!\nYOU HAVE WON!";
 				if (currentName == "Tutorial"){
 					nextLevel = "FireLevel";
@@ -526,7 +527,7 @@ public class PublicData : MonoBehaviour
 			isEnding = true;
 			if(!isArena){
 				endMessage = "TOO BAD.\nYOU LOST.";
-				nextLevel = Application.loadedLevelName;
+				nextLevel = SceneManager.GetActiveScene().name;
 				buttonMessage = "Retry.";
 				end = badEnd;
 
@@ -536,9 +537,9 @@ public class PublicData : MonoBehaviour
 				GetComponent<BonusCounter>().countBonuses();
 			} else {
 				endMessage = "TOO BAD.\nYOU LOST.";
-				nextLevel = Application.loadedLevelName;
+				nextLevel = SceneManager.GetActiveScene().name;
 				buttonMessage = "Retry.";
-				//Application.LoadLevel("ChristmasIntro");
+				//SceneManager.LoadScene("ChristmasIntro");
 			}
 
 		}

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BonusCounter : MonoBehaviour {
@@ -133,7 +134,7 @@ public class BonusCounter : MonoBehaviour {
 		} 
 
 		PlayerPrefs.SetFloat("highScore", finalScore);
-		PlayerPrefs.SetString("highScore", Application.loadedLevelName);
+		PlayerPrefs.SetString("highScore", SceneManager.GetActiveScene().name);
 	}
 	
 	void OnGUI(){
@@ -153,10 +154,10 @@ public class BonusCounter : MonoBehaviour {
 				if(!isWon){
 					
 					if (GUI.Button (new Rect ((Screen.width - 500) / 2 + 95, (Screen.height - 80), 140, 60), "Retry")) {
-						Application.LoadLevel (nextLevel);
+						SceneManager.LoadScene(nextLevel);
 					}
 					if (GUI.Button (new Rect ((Screen.width - 500) / 2 + 265, (Screen.height - 80), 140, 60), "Exit")) {
-						Application.LoadLevel ("Intro");
+						SceneManager.LoadScene("Intro");
 					}
 					
 				} else {
@@ -168,7 +169,7 @@ public class BonusCounter : MonoBehaviour {
 					GUI.Label(new Rect (Screen.width / 2 - 110, Screen.height - 150, 180, 100), dmgDone.ToString());
 					
 					if (GUI.Button (new Rect ((Screen.width - 400) / 2 + 133, (Screen.height - 80), 140, 60), "Continue")) {
-						Application.LoadLevel (nextLevel);
+						SceneManager.LoadScene(nextLevel);
 					}
 					GUI.Label(new Rect(Screen.width / 2 + 10, Screen.height - 200, 200, 150), message);
 				}
@@ -229,10 +230,10 @@ public class BonusCounter : MonoBehaviour {
 				if(!isWon){
 					
 					if (GUI.Button (new Rect ((Screen.width - 500) / 2 + 105, (Screen.height - 80), 140, 60), "Retry")) {
-						Application.LoadLevel (nextLevel);
+						SceneManager.LoadScene(nextLevel);
 					}
 					if (GUI.Button (new Rect ((Screen.width - 500) / 2 + 275, (Screen.height - 80), 140, 60), "Exit")) {
-						Application.LoadLevel ("Intro");
+						SceneManager.LoadScene("Intro");
 					}
 					
 				} else {
@@ -244,7 +245,7 @@ public class BonusCounter : MonoBehaviour {
 					GUI.Label(new Rect (Screen.width / 2 - 110, Screen.height - 178, 180, 100), dmgDone.ToString());
 					
 					if (GUI.Button (new Rect ((Screen.width - 400) / 2 + 133, (Screen.height - 80), 140, 60), "Continue")) {
-						Application.LoadLevel (nextLevel);
+						SceneManager.LoadScene(nextLevel);
 					}
 					GUI.Label(new Rect(Screen.width / 2 + 10, Screen.height - 200, 200, 150), message);
 				}

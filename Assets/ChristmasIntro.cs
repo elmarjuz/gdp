@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ChristmasIntro : MonoBehaviour {
@@ -27,8 +28,8 @@ public class ChristmasIntro : MonoBehaviour {
 
 		if(isStart){
 			if (GUI.Button(new Rect(Screen.width/2-60, Screen.height/2-10, 120, 60), startTexture))
-				SceneManager.LoadScene();
-			
+				SceneManager.LoadScene("Intro");
+				
 			if (GUI.Button(new Rect(Screen.width/2-60, Screen.height/2+46, 120, 60), tutorialTexture)){
 				transform.position = new Vector3(20, 0, -10);
 				isStart = false;
@@ -59,7 +60,7 @@ public class ChristmasIntro : MonoBehaviour {
 
 		if(isTut2){
 			if (GUI.Button(new Rect(Screen.width/2+210, Screen.height/2+168, 120, 60), startTexture)){
-				SceneManager.LoadScene();
+				SceneManager.LoadScene("Intro");
 			}
 				
 			if (GUI.Button(new Rect(Screen.width/2-330, Screen.height/2-212, 120, 60), preTexture)){

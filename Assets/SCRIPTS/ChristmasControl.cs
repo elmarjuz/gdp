@@ -114,10 +114,6 @@ public class ChristmasControl : MonoBehaviour {
 		}
 	}
 	
-	static bool IsDashboard() {
-		return Application.platform == RuntimePlatform.OSXDashboardPlayer;
-	}
-	
 	
 	void LateUpdate () {
 		if (showfps || showfpsgraph) {
@@ -385,7 +381,7 @@ public class ChristmasControl : MonoBehaviour {
 	        Application.OpenURL(url);
 	    }*/
 		/*if (GUILayout.Button ("Title Menu")) {
-			Application.LoadLevel("Intro");
+			SceneManager.LoadScene("Intro");
 		}*/
 		if (GUILayout.Button (btnExit)) {
 			Application.Quit();

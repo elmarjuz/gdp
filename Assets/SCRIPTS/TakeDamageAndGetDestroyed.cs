@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class TakeDamageAndGetDestroyed : MonoBehaviour
@@ -120,7 +121,7 @@ public class TakeDamageAndGetDestroyed : MonoBehaviour
 
 		if (health <= 0) {
 			if (theTag == "LilShip") {
-				if(Application.loadedLevelName != "Tutorial"){
+				if(SceneManager.GetActiveScene().name != "Tutorial"){
 					Instantiate (xplosion, transform.position, transform.rotation);
 					Instantiate (xplosionSound);
 					GetComponent<LilShipControls> ().setWasTeleported (true);
@@ -139,7 +140,7 @@ public class TakeDamageAndGetDestroyed : MonoBehaviour
 				Instantiate (xplosionSound);
 				disablePart ();
 			} else if (theTag != "MotherShip" && theTag != "EnemyShip" ) {
-				if(Application.loadedLevelName != "Tutorial"){
+				if(SceneManager.GetActiveScene().name != "Tutorial"){
 					if(!isRespawning){
 						sprite.GetComponent<SpriteRenderer>().enabled = false;
 						transform.Find("LIFE BAR").GetComponent<SpriteRenderer>().enabled = false;

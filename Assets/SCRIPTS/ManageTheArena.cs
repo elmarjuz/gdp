@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ManageTheArena : MonoBehaviour {
@@ -29,7 +30,8 @@ public class ManageTheArena : MonoBehaviour {
 	public GameObject snowman;
 	public GameObject enemy;
 
-	public GameObject snowStorm;
+	GameObject snowStorm = null;
+	public GameObject SnowStorm { get; set; }
 
 	TakeDamageAndGetDestroyed core;
 	TakeDamageAndGetDestroyed leftarm;
@@ -189,11 +191,11 @@ public class ManageTheArena : MonoBehaviour {
 			EnlargePlanet();
 			angles = new float[,]{
 				{30, 100, 110, 115, 155, 165, 210, 0, 0},
-				{25, 105, 160, 180, 330, 355, 0, 0, 0, 0},
-				{350, 335, 340, 97, 175, 3, 0, 0, 0, 0},
-				{325, 40, 120, 205, 0, 0, 0, 0, 0, 0},
-				{27, 157, 215, 345, 0, 0, 0, 0, 0, 0}, 
-				{140, 270, 50, 0, 0, 0, 0, 0, 0, 0}
+				{25, 105, 160, 180, 330, 355, 0, 0, 0},
+				{350, 335, 340, 97, 175, 3, 0, 0, 0},
+				{325, 40, 120, 205, 0, 0, 0, 0, 0},
+				{27, 157, 215, 345, 0, 0, 0, 0, 0}, 
+				{140, 270, 50, 0, 0, 0, 0, 0, 0}
 			};
 			gun.GetComponent<RocketLaunch>().enabled = true;
 			things = new GameObject[]{gun, shield, burst, enemy, missile, snowman};
@@ -204,11 +206,11 @@ public class ManageTheArena : MonoBehaviour {
 			EnlargePlanet();
 			angles = new float[,]{
 				{30, 92, 110, 115, 155, 165, 200, 320, 0},
-				{31, 105, 150, 170, 330, 355, 85, 0, 0, 0},
-				{355, 340, 345, 103, 155, 3, 200, 0, 0, 0},
-				{325, 35, 130, 85, 0, 0, 0, 0, 0, 0},
-				{27, 157, 215, 345, 80, 355, 0, 0, 0, 0}, 
-				{10, 100, 190, 260, 0, 0, 0, 0, 0, 0}
+				{31, 105, 150, 170, 330, 355, 85, 0, 0},
+				{355, 340, 345, 103, 155, 3, 200, 0, 0},
+				{325, 35, 130, 85, 0, 0, 0, 0, 0},
+				{27, 157, 215, 345, 80, 355, 0, 0, 0}, 
+				{10, 100, 190, 260, 0, 0, 0, 0, 0}
 			};
 			gun.GetComponent<RocketLaunch>().enabled = true;
 			things = new GameObject[]{gun, shield, burst, enemy, missile, snowman};
@@ -219,11 +221,11 @@ public class ManageTheArena : MonoBehaviour {
 			EnlargePlanet();
 			angles = new float[,]{
 				{30, 100, 110, 115, 155, 165, 200, 320, 5},
-				{31, 105, 150, 170, 330, 355, 85, 0, 0, 0},
-				{350, 335, 340, 97, 155, 3, 200, 12, 240, 0},
-				{325, 35, 130, 85, 240, 0, 0, 0, 0, 0},
-				{27, 157, 215, 345, 80, 355, 90, 0, 0, 0}, 
-				{140, 270, 50, 39, 0, 0, 0, 0, 0, 0}
+				{31, 105, 150, 170, 330, 355, 85, 0, 0},
+				{350, 335, 340, 97, 155, 3, 200, 12, 240},
+				{325, 35, 130, 85, 240, 0, 0, 0, 0},
+				{27, 157, 215, 345, 80, 355, 90, 0, 0}, 
+				{140, 270, 50, 39, 0, 0, 0, 0, 0}
 			};
 			gun.GetComponent<RocketLaunch>().enabled = true;
 			things = new GameObject[]{gun, shield, burst, enemy, missile, snowman};

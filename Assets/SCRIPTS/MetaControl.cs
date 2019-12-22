@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MetaControl : MonoBehaviour {
@@ -83,11 +84,11 @@ public GUISkin skin;
  
 	void Start() {
 		//isGameStarted=false;
-		if(Application.loadedLevelName == "Intro"){
+		if(SceneManager.GetActiveScene().name == "Intro"){
 			GetComponent<CameraControls>().enabled = false;
 			GetComponent<AudioSource>().clip = music[0];
 			GetComponent<AudioSource>().Play ();
-		} else if(Application.loadedLevelName == "ChristmasArena"){
+		} else if(SceneManager.GetActiveScene().name == "ChristmasArena"){
 			GetComponent<CameraControls>().enabled = false;
 			GetComponent<AudioSource>().clip = music[2];
 			GetComponent<AudioSource>().Play ();
@@ -104,7 +105,7 @@ public GUISkin skin;
 		//PauseGame ();
 		isBegin = true;
 
-		switch(Application.loadedLevelName){
+		switch(SceneManager.GetActiveScene().name){
 		case "FireLevel":
 			text = "Gaining control of the machine it quickly became obvious that the ship wouldn't be able to house the surviving Inwonians for a long time. " +
 				"Having nowhere to go, yet desperate to survive, the nomads decided to try and seek help at the nearest inhabited planet the mothership's navigation could locate. " +
@@ -167,10 +168,7 @@ public GUISkin skin;
 	        fpsarray[fpsarray.Length - 1]=fps;
 	    }
 	}
- 
-	static bool IsDashboard() {
-	    return Application.platform == RuntimePlatform.OSXDashboardPlayer;
-	}
+
 
 	void Update(){
 		if(isBegin){
@@ -189,7 +187,7 @@ public GUISkin skin;
  
 		if (Input.GetKeyDown("escape")) 
 		{
-			if(Application.loadedLevelName != "Intro"){
+			if(SceneManager.GetActiveScene().name != "Intro"){
 				ActivateMenu();
 			}
 
@@ -283,25 +281,25 @@ public GUISkin skin;
 	void LoadScene() {
 		BeginPage(300,300);
 		if (GUILayout.Button("Restart")){
-			Application.LoadLevel(Application.loadedLevelName);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 		if (GUILayout.Button("Intro")){
-			Application.LoadLevel("Intro");
+			SceneManager.LoadScene("Intro");
 		}
 		if (GUILayout.Button("Tutorial")){
-			Application.LoadLevel("Tutorial");
+			SceneManager.LoadScene("Tutorial");
 		}
 		if (GUILayout.Button("Fire Level")){
-			Application.LoadLevel("FireLevel");
+			SceneManager.LoadScene("FireLevel");
 		}
 		if (GUILayout.Button("Techno Level")){
-			Application.LoadLevel("TechnoLevel");
+			SceneManager.LoadScene("TechnoLevel");
 		}
 		if (GUILayout.Button("Nature Level")){
-			Application.LoadLevel("NatureLevel");
+			SceneManager.LoadScene("NatureLevel");
 		}
 		if (GUILayout.Button("TEST SCENE")){
-			Application.LoadLevel("testscene");
+			SceneManager.LoadScene("testscene");
 		}
 
 		EndPage();
@@ -315,34 +313,40 @@ public GUISkin skin;
 		GUI.skin.button.fontSize = 27;
 		if (GUI.Button(new Rect(Screen.width/2-102, Screen.height/2-135, 220, 50), "Daytona White"))
 		{
+			/* TODO: verify
 			if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 				Application.ExternalEval("window.open('https://www.facebook.com/daytonawhiteband')");
 			} else {
-				Application.OpenURL("https://www.facebook.com/daytonawhiteband");
 				
-			}
+			}*/
+
+			Application.OpenURL("https://www.facebook.com/daytonawhiteband");
 			GUI.skin.button.fontSize = size;
 		}
 		GUI.skin.button.fontSize = size;
 		GUI.skin = pretty;
 		if (GUI.Button(new Rect(Screen.width/2-200, Screen.height/2+185, 200, 65), fbTexture))
 		{
+			/* TODO: verify
 			if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 				Application.ExternalEval("window.open('http://www.facebook.com/itneverworksout')");
 			} else {
-				Application.OpenURL("http://www.facebook.com/itneverworksout");
 				
 			}
+			*/
+			Application.OpenURL("http://www.facebook.com/itneverworksout");
 		}
 		
 		if (GUI.Button(new Rect(Screen.width/2+20, Screen.height/2+185, 200, 65), indieTexture))
 		{
+			/* TODO: verify
 			if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 				Application.ExternalEval("window.open('http://indiedb.com/games/inwo')");
 			} else {
-				Application.OpenURL("http://indiedb.com/games/inwo");
 				
 			}
+			*/
+			Application.OpenURL("http://indiedb.com/games/inwo");
 		}
 		GUI.skin = skin;
 
@@ -492,7 +496,7 @@ public GUISkin skin;
 	        UnPauseGame();
 	    }
 		if (GUILayout.Button ("Restart")) {
-			Application.LoadLevel(Application.loadedLevelName);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	    if (GUILayout.Button ("Audio")) {
 	        currentPage = Page.Options;
@@ -514,7 +518,7 @@ public GUISkin skin;
 
 
 		/*if (GUILayout.Button (titleTexture)) {
-			Application.LoadLevel("Intro");
+			SceneManager.LoadScene("Intro");
 		}
 		if (GUILayout.Button (exitTexture)) {
 			Application.Quit();
@@ -525,7 +529,7 @@ public GUISkin skin;
 		int size =  GUI.skin.button.fontSize;
 		GUI.skin.button.fontSize = 22;
 		if (GUI.Button (new Rect(Screen.width/2-23, Screen.height/2+159, 58, 30), "Exit")) {
-			Application.LoadLevel("Intro");
+			SceneManager.LoadScene("Intro");
 			GUI.skin.button.fontSize = size;
 		}
 		GUI.skin.button.fontSize = size;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Intro : MonoBehaviour
@@ -416,13 +417,13 @@ public class Intro : MonoBehaviour
 
 
 				if (GUILayout.Button("Slaver Station"))
-					SceneManager.LoadScene();
+					SceneManager.LoadScene("Slaver Station");
 				if (PlayerPrefs.GetInt("level")>0 && GUILayout.Button("Fire Planet"))
-					SceneManager.LoadScene();
+					SceneManager.LoadScene("Fire Planet");
 				if (PlayerPrefs.GetInt("level")>1 && GUILayout.Button("Techno Planet"))
-					SceneManager.LoadScene();
+					SceneManager.LoadScene("Techno Planet");
 				if (PlayerPrefs.GetInt("level")>2 && GUILayout.Button("Jungle Planet"))
-					SceneManager.LoadScene();
+					SceneManager.LoadScene("Jungle Planet");
 				GUI.EndGroup();
 				if(Screen.width == 960){
 					if (GUI.Button(new Rect(Screen.width/2-130, Screen.height-90, 70, 40), "Back"))
@@ -459,34 +460,40 @@ public class Intro : MonoBehaviour
 					GUI.skin.button.fontSize = 25;
 					if (GUI.Button(new Rect(Screen.width/2-94, Screen.height/2-106, 200, 50), "Daytona White"))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('https://www.facebook.com/daytonawhiteband')");
 						} else {
-							Application.OpenURL("https://www.facebook.com/daytonawhiteband");
 							
 						}
-						
+						*/
+						Application.OpenURL("https://www.facebook.com/daytonawhiteband");
 					}
 					
 					GUI.skin = pretty;
 					if (GUI.Button(new Rect(Screen.width/2-170, Screen.height/2+180, 170, 65), fbTexture))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('https://www.facebook.com/itneverworksout')");
 						} else {
-							Application.OpenURL("https://www.facebook.com/itneverworksout");
+							
 							
 						}
+						*/
+						Application.OpenURL("https://www.facebook.com/itneverworksout");
 					}
 					
 					if (GUI.Button(new Rect(Screen.width/2+20, Screen.height/2+180, 170, 65), indieTexture))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('http://indiedb.com/games/inwo')");
 						} else {
-							Application.OpenURL("http://indiedb.com/games/inwo");
-							
 						}
+						*/
+						Application.OpenURL("http://indiedb.com/games/inwo");
+							
 					}
 					GUI.skin = skin;
 					if (GUI.Button(new Rect(Screen.width/2-28, Screen.height/2+250, 80, 48), "Back"))
@@ -501,34 +508,36 @@ public class Intro : MonoBehaviour
 					GUI.skin = skin;
 					if (GUI.Button(new Rect(Screen.width/2-116, Screen.height/2-144, 250, 65), "Daytona White"))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('https://www.facebook.com/daytonawhiteband')");
 						} else {
-							Application.OpenURL("https://www.facebook.com/daytonawhiteband");
-							
 						}
-						
+						*/
+						Application.OpenURL("https://www.facebook.com/daytonawhiteband");
 					}
 					
 					GUI.skin = pretty;
 					if (GUI.Button(new Rect(Screen.width/2-200, Screen.height/2+220, 200, 65), fbTexture))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('https://www.facebook.com/itneverworksout')");
 						} else {
-							Application.OpenURL("https://www.facebook.com/itneverworksout");
 							
 						}
+						*/
+						Application.OpenURL("https://www.facebook.com/itneverworksout");
 					}
 					
 					if (GUI.Button(new Rect(Screen.width/2+20, Screen.height/2+220, 200, 65), indieTexture))
 					{
+						/* TODO: verify
 						if (Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.OSXWebPlayer) {
 							Application.ExternalEval("window.open('http://indiedb.com/games/inwo')");
-						} else {
-							Application.OpenURL("http://indiedb.com/games/inwo");
-							
-						}
+						} else {}
+						*/
+						Application.OpenURL("http://indiedb.com/games/inwo");	
 					}
 					GUI.skin = skin;
 					if (GUI.Button(new Rect(Screen.width/2-36, Screen.height/2+300, 100, 66), "Back"))
