@@ -1,0 +1,5 @@
+/*
+!**/GDP2D.csproj
+!**/.gitignore
+!/Assets
+/Assets/VISUALS/**/*.psd

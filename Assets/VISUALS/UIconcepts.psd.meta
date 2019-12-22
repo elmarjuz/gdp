@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 8844669c0be6bd84fac4f929af650bf7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 859205236062269427
+    second: UIconcepts_0
+  - first:
+      213: -2675552598420694590
+    second: UIconcepts_1
+  - first:
+      213: -4008272484260033461
+    second: UIconcepts_2
+  - first:
+      213: 8386430656175584356
+    second: UIconcepts_3
+  - first:
+      213: -3079016784284822152
+    second: UIconcepts_4
+  - first:
+      213: -3958719365822368099
+    second: UIconcepts_6
+  - first:
+      213: -1116230084199829373
+    second: UIconcepts_7
+  - first:
+      213: -4046019853797022536
+    second: UIconcepts_8
+  - first:
+      213: -2557086319568783436
+    second: UIconcepts_9
+  - first:
+      213: -6012661854525155824
+    second: UIconcepts_10
+  - first:
+      213: 514920583296769516
+    second: UIconcepts_11
+  - first:
+      213: -8713901282173275726
+    second: UIconcepts_12
+  - first:
+      213: -8188291999739449744
+    second: UIconcepts_13
+  - first:
+      213: 2343147038079968076
+    second: UIconcepts_14
+  - first:
+      213: -1272782623513175162
+    second: UIconcepts_15
+  - first:
+      213: 1801578510793838378
+    second: UIconcepts_16
+  - first:
+      213: -2442618489190104070
+    second: UIconcepts_17
+  - first:
+      213: 6925776671450612475
+    second: UIconcepts_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIconcepts_0
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 457
+        width: 386
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffa5a42c928ceb00800000000000000
+      internalID: 859205236062269427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 419
+        width: 396
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9d24166178edad0800000000000000
+      internalID: -2675552598420694590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 385
+        width: 386
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c45bc8961cf58c0800000000000000
+      internalID: -4008272484260033461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 305
+        width: 520
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464bac2af36926470800000000000000
+      internalID: 8386430656175584356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 241
+        width: 506
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875dc3b4c822545d0800000000000000
+      internalID: -3079016784284822152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 180
+        width: 168
+        height: 40
+      alignment: 9
+      pivot: {x: 0.02, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96b2b206bdcf09c0800000000000000
+      internalID: -3958719365822368099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 169
+        width: 204
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3803aa707aa5280f0800000000000000
+      internalID: -1116230084199829373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 179
+        width: 168
+        height: 40
+      alignment: 9
+      pivot: {x: 0.98, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b420443166a9d7c0800000000000000
+      internalID: -4046019853797022536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_9
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 103
+        width: 227
+        height: 47
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b777165a87638cd0800000000000000
+      internalID: -2557086319568783436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_10
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 120
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0169c7656ebbe8ca0800000000000000
+      internalID: -6012661854525155824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 107
+        width: 227
+        height: 47
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedd0f6da8d552700800000000000000
+      internalID: 514920583296769516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 51
+        width: 210
+        height: 50
+      alignment: 9
+      pivot: {x: 0.08, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1bd3cb3f0021780800000000000000
+      internalID: -8713901282173275726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_13
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 77
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e6b564fc75d5e80800000000000000
+      internalID: -8188291999739449744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_14
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 53
+        width: 210
+        height: 50
+      alignment: 9
+      pivot: {x: 0.92, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c43e34d01d7848020800000000000000
+      internalID: 2343147038079968076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_15
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7
+        width: 201
+        height: 41
+      alignment: 9
+      pivot: {x: 0.08, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b153982fa265ee0800000000000000
+      internalID: -1272782623513175162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 46
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f08d24c1e700910800000000000000
+      internalID: 1801578510793838378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_17
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 9
+        width: 201
+        height: 41
+      alignment: 9
+      pivot: {x: 0.92, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3c506fc631a1ed0800000000000000
+      internalID: -2442618489190104070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIconcepts_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 9
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf24087303d4d1060800000000000000
+      internalID: 6925776671450612475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
